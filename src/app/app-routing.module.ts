@@ -8,10 +8,10 @@ const routes: Routes = [
     path: 'budget-planner',
     loadChildren: () => import('./budget-planner/budget-planner.module').then(m => m.BudgetPlannerModule)
   },
-  // {
-  //   path:'',
-  //   component:ProfileComponent
-  // }
+  {
+    path:'',
+    component:ProfileComponent
+  }
 ];
 
 @NgModule({
