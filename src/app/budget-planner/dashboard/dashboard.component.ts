@@ -1,11 +1,13 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
+import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 
 @Component({
   selector: 'app-dashboard',
   standalone:true,
-  imports:[CommonModule],
+  imports:[CommonModule,MatIconModule,SideNavComponent],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
