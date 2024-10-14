@@ -6,19 +6,24 @@ body {
   }
   
   .navbar {
-    background: linear-gradient(135deg, #008080, #80ced6);
+    background: linear-gradient(135deg,rgb(8, 139, 107), #59eeee);
     padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 20px;
-    color: #ffffff;
+    border-radius: 200px;
+    color: white;
+  }
+  .heading{
+    font-size:40px; /* Adjust size as needed */
+    margin: 0;      /* Remove default margin */
+    text-align: center; /* Center text within the heading */
   }
   
   .login-container {
     max-width: 400px;
     margin: 100px auto 50px auto;
-    background-color: #ffffff;
+    background-color:white;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     padding: 40px;

@@ -12,7 +12,7 @@ import { TodoTranscationsComponent } from './todo-transcations/todo-transcations
 const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'side-nav',component:SideNavComponent},
-  {path:'dashboard',component:DashboardComponent},
+  {path:'dashboard',component:DashboardComponent},//naviagation (login => dashboard)
   {path:'income',component:IncomeComponent},
   {path:'expense',component:ExpenseComponent},
   {path:'todo',component:TodoTranscationsComponent},
