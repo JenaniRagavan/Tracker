@@ -1,0 +1,12 @@
+
+.nav-link {
+    margin-left: 15px; /* Adjust the spacing as needed */
+}
+
+.landing-bodypage{
+    background-size: cover;
+    background-position: center;
+    background-color: palevioletred; /* Semi-transparent background for readability */
+    padding: 20px;
+    border-radius: 20px;
+}

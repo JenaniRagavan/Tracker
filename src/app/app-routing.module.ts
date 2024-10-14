@@ -7,6 +7,10 @@ const routes: Routes = [
   // eager loading 
   path:'',
   component:LandingPageComponent
+},
+{
+  path: 'budget-planner',
+  loadChildren: () => import('./budget-planner/budget-planner.module').then(m => m.BudgetPlannerModule)
 }
 ];
 
