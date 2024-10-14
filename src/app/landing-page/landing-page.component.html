@@ -1,4 +1,15 @@
-<h2>this</h2>
+<!-- nav bar and button setup  -->
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="/src/app/asset/images/logo.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
+      Expense Tracker 
+    </a>
+    <button type="button" class="btn btn-success" routerLink="budget-planner/login">Login</button>
+  </div>
+</nav>
+
+<!-- body of the tracker  -->
 <div class="body">
   <div class="letter-sequence-container">
       <span *ngFor="let letter of letters; let i = index" [ngStyle]="{animationDelay: i * 0.1 + 's'}"

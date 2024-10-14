@@ -10,15 +10,10 @@
 
 
 .letter-sequence-container {
-
-
- 
-  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    
-
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 70px;
-    color: white;
-    text-shadow: 2px 2px 40px #0af80a;
+    color:darkblue;
+    text-shadow: 2px 2px 40px whitesmoke;
     font-weight: 900;
 
   }
