@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { Validators } from '@angular/forms';
+import { FormBuilder, ReactiveFormsModule } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
@@ -8,7 +9,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
   standalone:true,
-  imports:[ReactiveFormsModule,CommonModule]
+  imports:[ ReactiveFormsModule,
+           CommonModule
+  ]
 })
 export class ProfileComponent {
   profileForm:any;
