@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { MatIconAnchor } from '@angular/material/button';
-import { Router } from 'express';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-sidenav-bar',
@@ -31,5 +31,3 @@ export class SidenavBarComponent {
   }
 }
 
-
-}

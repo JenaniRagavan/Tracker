@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { Router } from 'express';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dashboard',
