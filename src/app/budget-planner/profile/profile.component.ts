@@ -2,12 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { SideNavComponent } from '../side-nav/side-nav.component';
 
 
 @Component({
   selector: 'app-profile',
   standalone:true,
-  imports:[ ReactiveFormsModule,CommonModule],
+  imports:[ ReactiveFormsModule,CommonModule,SideNavComponent],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
 })
