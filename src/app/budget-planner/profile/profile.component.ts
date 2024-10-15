@@ -6,12 +6,10 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile',
+  standalone:true,
+  imports:[ ReactiveFormsModule,CommonModule],
   templateUrl: './profile.component.html',
   styleUrls: ['./profile.component.css'],
-  standalone:true,
-  imports:[ ReactiveFormsModule,
-           CommonModule
-  ]
 })
 export class ProfileComponent {
   profileForm:any;
