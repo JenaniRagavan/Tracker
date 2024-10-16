@@ -9,9 +9,12 @@ import { TodoTranscationsComponent } from './todo-transcations/todo-transcations
 import { HistoryComponent } from './history/history.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
+import { ChartModule } from 'angular-highcharts';
+
 
 @NgModule({
-  declarations: [],  
+  declarations: [
+  ],  
     imports: [
     CommonModule,
     BudgetPlannerRoutingModule,
@@ -22,7 +25,8 @@ import { SideNavComponent } from './side-nav/side-nav.component';
     TodoTranscationsComponent,
     HistoryComponent,
     ProfileComponent,
-    SideNavComponent
+    SideNavComponent,
+    ChartModule
     //its all declared in"declaration part" but i mention in it in import part
   ]
 })
