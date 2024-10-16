@@ -2,11 +2,13 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ChartModule } from 'angular-highcharts';
+
 
 @Component({
   selector: 'app-income',
   standalone:true,
-  imports:[ReactiveFormsModule,CommonModule],
+  imports:[ReactiveFormsModule,CommonModule,ChartModule],
   templateUrl: './income.component.html',
   styleUrl: './income.component.css'
 })
@@ -30,9 +32,22 @@ export class IncomeComponent {
   ];
   monthSelected:boolean=false;
   constructor(public fb: FormBuilder,public router:Router) { 
+    this.selectedMonth = 'January'; // default value
     const currentDate = new Date();
     this.selectedMonth = currentDate.toLocaleString('default', { month: 'long' });
   }
+
+  // Chart data
+  public lineChartData: any[] = [
+    { data: [], label: 'Income' }
+  ];
+  public lineChartLabels: string[] = [];
+  public lineChartOptions: any = {
+    responsive: true
+  };
+  
+  
+  
   ngOnInit(): void {
     this.incomeForm = this.fb.group({
       month: ['', Validators.required],
@@ -41,6 +56,8 @@ export class IncomeComponent {
       investments: ['', Validators.required]
     });
   }
+
+  
 
   onChange(event: any) {
     this.selectedMonth = event.target.value
@@ -114,4 +131,9 @@ export class IncomeComponent {
   onBack() {
     this.router.navigate(['/budget-planner/dashboard']);
   }
+
+  //charts
+
+  public lineChart: any; 
+  
 }
