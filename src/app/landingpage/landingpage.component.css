@@ -1,5 +1,9 @@
 .body {
     background-color: #f8f9fa; /* Light background for contrast */
-  
+    background-image: url('../../assets/images/background.jpg');
+    background-position: cover;
+   background-repeat: no-repeat;
+   background-size: cover;
+   
   }
   
