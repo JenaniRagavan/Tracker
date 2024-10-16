@@ -11,8 +11,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { SideNavComponent } from './side-nav/side-nav.component';
 import { ChartModule } from 'angular-highcharts';
 
+
 @NgModule({
-  declarations: [],  
+  declarations: [
+  ],  
     imports: [
     CommonModule,
     BudgetPlannerRoutingModule,

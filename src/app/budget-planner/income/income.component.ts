@@ -1,8 +1,11 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ChartModule } from 'angular-highcharts';
+import { Title } from 'chart.js';
+import { text } from 'express';
+import { chart } from 'highcharts';
 
 
 @Component({
@@ -12,7 +15,7 @@ import { ChartModule } from 'angular-highcharts';
   templateUrl: './income.component.html',
   styleUrl: './income.component.css'
 })
-export class IncomeComponent {
+export class IncomeComponent implements OnInit {
   incomeForm: any;
   selectedMonth: any;
   januaryIncomes: any[] = [
@@ -46,8 +49,6 @@ export class IncomeComponent {
     responsive: true
   };
   
-  
-  
   ngOnInit(): void {
     this.incomeForm = this.fb.group({
       month: ['', Validators.required],
@@ -57,7 +58,6 @@ export class IncomeComponent {
     });
   }
 
-  
 
   onChange(event: any) {
     this.selectedMonth = event.target.value
