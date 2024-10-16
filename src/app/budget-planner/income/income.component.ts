@@ -14,15 +14,17 @@ export class IncomeComponent {
   incomeForm: any;
   selectedMonth: any;
   januaryIncomes: any[] = [
-    { source: 'Salary', amount: 5000, investments: '401(k)' },
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5000, investments: '' },
     { source: 'Freelancing', amount: 1000, investments: 'Stocks' },
   ];
   februaryIncomes: any[] = [
-    { source: 'Salary', amount: 5500, investments: '401(k)' },
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
     { source: 'Rental Income', amount: 700, investments: 'Real Estate' },
   ];
   marchIncomes: any[] = [
-    { source: 'Salary', amount: 5200, investments: '401(k)' },
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
     { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
     { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
   ];
