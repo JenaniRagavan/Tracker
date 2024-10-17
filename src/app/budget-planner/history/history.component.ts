@@ -33,6 +33,43 @@ export class HistoryComponent {
     { expenseType: 'Recharge', expenseAmount: 1100 },
     { expenseType: 'Essentials', expenseAmount: 250 }
   ];
+  AprilExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1000 },
+    { expenseType: 'Groceries', expenseAmount: 500},
+  ];
+  MayExpense: any[] = [
+    { expenseType: 'Utilities', expenseAmount: 200 },
+    { expenseType: 'Groceries', expenseAmount: 400 }
+  ];
+  JuneExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1100 },
+    { expenseType: 'Utilities', expenseAmount: 250 }
+  ];
+  JulyExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1000 },
+    { expenseType: 'Groceries', expenseAmount: 500},
+  ];
+  AugustExpense: any[] = [
+    { expenseType: 'Utilities', expenseAmount: 200 },
+    { expenseType: 'Groceries', expenseAmount: 400 }
+  ];
+  SeptemberExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1100 },
+    { expenseType: 'Utilities', expenseAmount: 250 }
+  ];
+  OctoberExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1000 },
+    { expenseType: 'Groceries', expenseAmount: 500},
+  ];
+  NovemberExpense: any[] = [
+    { expenseType: 'Utilities', expenseAmount: 200 },
+    { expenseType: 'Groceries', expenseAmount: 400 }
+  ];
+  DecemberExpense: any[] = [
+    { expenseType: 'Rent', expenseAmount: 1100 },
+    { expenseType: 'Utilities', expenseAmount: 250 }
+  ];
+
 
   constructor(private fb: FormBuilder, private router: Router) {
     this.selectedMonth = new Date().toLocaleString('default', { month: 'long' });
@@ -68,6 +105,24 @@ export class HistoryComponent {
         return this.februaryExpense;
       case 'March':
         return this.marchExpense;
+      case 'April':
+          return this.AprilExpense;
+      case 'May':
+        return this.MayExpense;
+      case 'June':
+        return this.JuneExpense;
+      case 'July':
+        return this.JulyExpense;
+      case 'August':
+        return this.AugustExpense;
+      case 'September':
+        return this.SeptemberExpense;
+      case 'October':
+        return this.OctoberExpense;
+      case 'November':
+        return this.NovemberExpense;
+      case 'December':
+        return this.DecemberExpense;
       default:
         return [];
     }
