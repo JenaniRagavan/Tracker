@@ -5,10 +5,10 @@ import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-todo-transcations',
-  templateUrl: './todo-transcations.component.html',
-  styleUrl: './todo-transcations.component.css',
   standalone:true,
-  imports:[ReactiveFormsModule,CommonModule]
+  imports:[ReactiveFormsModule,CommonModule],
+  templateUrl: './todo-transcations.component.html',
+  styleUrls: ['./todo-transcations.component.css']
 })
 export class TodoTranscationsComponent {
   todoForm: any;
