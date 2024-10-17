@@ -14,10 +14,19 @@
         <div class="form-group">
           <input type="password" formControlName="password" placeholder="Password" />
         </div>
+<<<<<<< HEAD
         <button type="submit">Login</button> <br> <br>
         <p (click)="toggleForm('register')">Don't have an account? 
+=======
+        <button type="submit">Login</button>
+        <!-- <p (click)="toggleForm('register')">Don't have an account? -->
+          <!-- <span class="highlighted">Register</span> -->
+        <!-- </p> -->
+        <p class="auth-switch" (click)="toggleForm('register')">Don't have an account?
+>>>>>>> f980413d80c462c1f554efaa8b1d45529be3ef75
           <span class="highlighted">Register</span>
         </p>
+        
       </form>
     <!-- Register -->
     <form *ngIf="activeForm === 'register'" [formGroup]="registerForm" (ngSubmit)="register()">
