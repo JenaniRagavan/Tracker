@@ -3,9 +3,6 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { ChartModule } from 'angular-highcharts';
-import { Title } from 'chart.js';
-import { text } from 'express';
-import { chart } from 'highcharts';
 
 
 @Component({
@@ -28,6 +25,60 @@ export class IncomeComponent implements OnInit {
     { source: 'Rental Income', amount: 700, investments: 'Real Estate' },
   ];
   marchIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  AprilIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  MayIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  JuneIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  JulyIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  AugustIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  SeptemberIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  OctoberIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  NovemberIncomes: any[] = [
+    { source: 'Salary', amount: 5500, investments: 'Essential' },
+    { source: 'Salary', amount: 5200, investments: '' },
+    { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
+    { source: 'Rental Income', amount: 600, investments: 'Real Estate' },
+  ];
+  DecemberIncomes: any[] = [
     { source: 'Salary', amount: 5500, investments: 'Essential' },
     { source: 'Salary', amount: 5200, investments: '' },
     { source: 'Freelancing', amount: 1200, investments: 'Stocks' },
@@ -80,7 +131,25 @@ export class IncomeComponent implements OnInit {
       case 'February':
         return this.februaryIncomes;
       case 'March':
-        return this.marchIncomes;
+          return this.marchIncomes;
+      case 'April':
+         return this.AprilIncomes
+      case 'May':
+         return this.MayIncomes
+      case 'June':
+          return this.JuneIncomes
+      case 'July':
+           return this.JulyIncomes
+      case 'August':
+         return this.AugustIncomes
+      case 'September':
+         return this.SeptemberIncomes
+      case 'october':
+         return this.OctoberIncomes
+      case 'November':
+         return this.NovemberIncomes
+      case 'December':
+          return this.DecemberIncomes
       default:
         return [];
     }
@@ -97,6 +166,33 @@ export class IncomeComponent implements OnInit {
         break;
       case 'March':
         filteredIncomes = [...this.marchIncomes];
+        break;
+      case 'April':
+        filteredIncomes = [...this.AprilIncomes];
+        break;
+      case 'May':
+        filteredIncomes = [...this.MayIncomes];
+        break;
+      case 'June':
+        filteredIncomes = [...this.JuneIncomes];
+        break;
+      case 'July':
+        filteredIncomes = [...this.JulyIncomes];
+        break;
+      case 'August':
+        filteredIncomes = [...this.AugustIncomes];
+        break;
+      case 'september':
+        filteredIncomes = [...this.SeptemberIncomes];
+        break;
+      case 'october':
+        filteredIncomes = [...this.OctoberIncomes];
+        break;
+      case 'November':
+        filteredIncomes = [...this.NovemberIncomes];
+        break;
+      case 'December':
+        filteredIncomes = [...this.DecemberIncomes];
         break;
       default:
         break;
@@ -115,6 +211,33 @@ export class IncomeComponent implements OnInit {
           break;
         case 'March':
           this.marchIncomes.push(newIncome);
+          break;
+        case 'April':
+          this.AprilIncomes.push(newIncome);
+          break;
+        case 'May':
+          this.MayIncomes.push(newIncome);
+          break;
+        case 'June':
+          this.JuneIncomes.push(newIncome);
+          break;
+        case 'July':
+          this.JulyIncomes.push(newIncome);
+          break;
+        case 'August':
+          this.AugustIncomes.push(newIncome);
+          break;
+        case 'September':
+          this.SeptemberIncomes.push(newIncome);
+          break;
+        case 'October':
+          this.OctoberIncomes.push(newIncome);
+          break;
+        case 'November':
+          this.NovemberIncomes.push(newIncome);
+          break;
+        case 'December':
+          this.DecemberIncomes.push(newIncome);
           break;
         default:
           break;

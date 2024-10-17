@@ -4,8 +4,14 @@
     background-position: cover;
    background-repeat: no-repeat;
    background-size: cover;
+   font-size: 0.9rem;
    
   }
 
+  .text-center{
+    padding:1rem;
+  }
   
-  
+  .container{
+    max-width: 80%;
+  }
