@@ -72,3 +72,21 @@
         </div>
     </div>
 </div>
+
+<!-- goal setting  -->
+<div class="goal-setting">
+    <h3>Set Expense Goal for {{ selectedMonth }}</h3>
+    <form [formGroup]= "goalForm" (ngSubmit)="onSubmitGoal()" class="input-form">
+        <div class="form-group">
+            <label for="expenseGoal">Goal Amount:</label>
+            <input type="number" formControlName="expenseGoal" id="expenseGoal" class="form-control" placeholder="Enter goal amount">
+        </div>
+        <button type="submit" class="btn btn-primary">Set Goal</button>
+    </form>
+    <div *ngIf="goalAmount">
+        <h4>Current Goal: ${{ goalAmount }}</h4>
+        <h4>Total Expenses: ${{ calculateTotalExpense(selectedMonth) }}</h4>
+        <h4 *ngIf="calculateTotalExpense(selectedMonth) > goalAmount" class="text-danger">Goal Exceeded!</h4>
+        <h4 *ngIf="calculateTotalExpense(selectedMonth) <= goalAmount" class="text-success">Goal Not Exceeded</h4>
+    </div>
+</div>

@@ -110,3 +110,17 @@ body {
     width: 800px;
     margin: 0 auto;
 }
+
+/* goal setting  */
+.goal-setting {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #e9f7f9;
+    border-radius: 6px;
+}
+.text-danger {
+    color: red;
+}
+.text-success {
+    color: green;
+}

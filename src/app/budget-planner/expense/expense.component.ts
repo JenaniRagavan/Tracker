@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatIconAnchor } from '@angular/material/button';
 import { Router } from '@angular/router';
 
@@ -12,6 +12,11 @@ import { Router } from '@angular/router';
   styleUrl: './expense.component.css'
 })
 export class ExpenseComponent {
+//goal setting
+  // 
+  goalForm! :FormGroup;
+  goalAmount:number | 2000=2000
+
   expenseForm: any;
   selectedMonth: string;
   expenses: { month: string, expenseAmount: number }[] = [
@@ -91,6 +96,12 @@ export class ExpenseComponent {
       expenseType: ['', Validators.required],
       expenseAmount: ['', Validators.required]
     });
+
+    // goal setting 
+    this.goalForm = this.fb.group({
+      expenseGoal: [null, Validators.required]
+    });
+  
   }
 
   onSubmitExpense() {
@@ -99,6 +110,7 @@ export class ExpenseComponent {
       this.getFilteredExpenses().push(newExpense);
       this.expenseForm.reset();
     }
+
   }
 
   onChangeExpense(event: any) {
@@ -156,6 +168,12 @@ export class ExpenseComponent {
   onBack() {
     this.router.navigate(['/budget-planner/dashboard']);
   } 
+
+  onSubmitGoal() {
+    if (this.goalForm.valid) {
+      this.goalAmount = this.goalForm.value.expenseGoal;
+      this.goalForm.reset();
+    }
 }
 
-
+}
