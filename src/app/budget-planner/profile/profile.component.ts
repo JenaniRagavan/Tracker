@@ -31,6 +31,7 @@ ngOnInit(): void {
 }
 
 onSubmit() {
+  console.log("submit triggred");
   if (this.profileForm.valid) {
     console.log("Form Save!!!",this.profileForm.value);
   } else {
